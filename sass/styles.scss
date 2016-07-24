@@ -1,0 +1,22 @@
+@import 'colors';
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: $bg-primary-color;
+}
+
+.flex-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: space-around;
+    align-items: center;
+}
