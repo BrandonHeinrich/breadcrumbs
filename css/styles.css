@@ -18,4 +18,17 @@ body {
   justify-content: space-around;
   align-items: center; }
 
+.viewport {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh; }
+
+#username {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 5px; }
+
 /*# sourceMappingURL=styles.css.map */
