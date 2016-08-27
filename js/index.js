@@ -16,6 +16,7 @@ var Events = {
   	document.addEventListener("pause", Events.Pause, true);
   	document.addEventListener("resume", Events.Resume, true);
   	document.addEventListener("backbutton", Events.BackButton, true);
+  	navigator.app.overrideButton("menubutton", true);  // <-- Add this line
   	document.addEventListener("menubutton", Events.MenuButton, true);
   	
   	// We want to update location at least once a second
