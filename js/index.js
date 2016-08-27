@@ -7,16 +7,20 @@ var State = {
 
 var Events = {
   "OnLoad": function() {
-  	// Bind the phonegap ev.ents
-  	document.addEventListener("pause", Events.Pause, false);
-  	document.addEventListener("resume", Events.Resume, false);
-  	document.addEventListener("backbutton", Events.BackButton, false);
-  	document.addEventListener("menubutton", Events.MenuButton, false);
+  	
+    
+    console.log("End of on load event");
+  },
+  "DeviceReady": function() {
+      // Bind the phonegap ev.ents
+  	document.addEventListener("pause", Events.Pause, true);
+  	document.addEventListener("resume", Events.Resume, true);
+  	document.addEventListener("backbutton", Events.BackButton, true);
+  	document.addEventListener("menubutton", Events.MenuButton, true);
   	
   	// We want to update location at least once a second
     setInterval(Commands.PullLocation, 1000);
-    
-    console.log("End of on load event");
+  	console.log("Device is ready");
   },
   "Pause": function() {
   	console.log("paused");
