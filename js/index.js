@@ -1,5 +1,7 @@
 /* global navigator */
 
+alert("Index.js Started Loading");
+
 var Events;
 var Commands;
 
@@ -33,4 +35,4 @@ latitude.innerHTML ="hello";
   }
 };
 
-alert("Index.js Loaded");
+alert("Index.js Finished Loaded");
