@@ -1,4 +1,4 @@
-alert("Logger.js Started Loading");
+//alert("Logger.js Started Loading");
 
 var former = console.log;
 
@@ -16,4 +16,4 @@ window.onerror = function(message, url, linenumber) {
             linenumber + " for " + url);
 }
 
-alert("Logger.js Finished Loaded");
+//alert("Logger.js Finished Loaded");

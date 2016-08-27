@@ -1,6 +1,6 @@
 /* global navigator */
 
-alert("Index.js Started Loading");
+//alert("Index.js Started Loading");
 
 var Events;
 var Commands;
@@ -12,14 +12,11 @@ Events = {
   }  
 };
 
-var latitude = document.getElementById("latitude");
-
 Commands = {
-  "PullLocation": function() 
-latitude.innerHTML ="hello";
+  "PullLocation": function() {
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
-				  
+				  var latitude = document.getElementById("latitude");
 				  var longitude = document.getElementById("longitude");
 				  latitude.innerHTML = position.coords.latitude;
 					longitude.innerHTML = position.coords.longitude;
@@ -35,4 +32,4 @@ latitude.innerHTML ="hello";
   }
 };
 
-alert("Index.js Finished Loaded");
+//alert("Index.js Finished Loaded");
