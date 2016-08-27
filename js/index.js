@@ -16,7 +16,7 @@ var Events = {
   	document.addEventListener("pause", Events.Pause, true);
   	document.addEventListener("resume", Events.Resume, true);
   	document.addEventListener("backbutton", Events.BackButton, true);
-  	document.addEventListener("backbutton", Events.MenuButton, true);
+  	document.addEventListener("menubutton", Events.MenuButton, true);
   	
   	// We want to update location at least once a second
     setInterval(Commands.PullLocation, 1000);
