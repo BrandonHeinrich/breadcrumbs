@@ -13,3 +13,5 @@ window.onerror = function(message, url, linenumber) {
     console.log("JavaScript error: " + message + " on line " + 
             linenumber + " for " + url);
 }
+
+alert("Logger.js Loaded");

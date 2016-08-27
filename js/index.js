@@ -5,8 +5,8 @@ var Commands;
 
 Events = {
   "OnLoad": function() {
+  	alert("OnLoad Event");
     setInterval(Commands.PullLocation, 1000);
-    alert(6);
   }  
 };
 
@@ -32,3 +32,5 @@ latitude.innerHTML ="hello";
         
   }
 };
+
+alert("Index.js Loaded");
