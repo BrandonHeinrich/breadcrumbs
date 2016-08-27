@@ -1,18 +1,36 @@
 /* global navigator */
 
-//alert("Index.js Started Loading");
-
-var Events;
-var Commands;
-
-Events = {
-  "OnLoad": function() {
-  	alert("OnLoad Event");
-    setInterval(Commands.PullLocation, 1000);
-  }  
+var State = {
+	"Log" : [],
+	"Username" : "Brandon Heinrich"
 };
 
-Commands = {
+var Events = {
+  "OnLoad": function() {
+  	// Bind the phonegap ev.ents
+  	document.addEventListener("pause", Events.Pause, false);
+  	document.addEventListener("resume", Events.Resume, false);
+  	document.addEventListener("backbutton", Events.BackButton, false);
+  	document.addEventListener("menubutton", Events.MenuButton, false);
+  	
+  	// We want to update location at least once a second
+    setInterval(Commands.PullLocation, 1000);
+  },
+  "Pause": function() {
+  	console.log("paused");
+  },
+  "Resume": function() {
+  	console.log("resuming");
+  },
+  "BackButton": function() {
+  	alert("BackButton Pressed");
+  },
+  "MenuButton": function() {
+  	alert("MenuButton Pressed");
+  }
+};
+
+var Commands = {
   "PullLocation": function() {
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
@@ -31,5 +49,3 @@ Commands = {
         
   }
 };
-
-//alert("Index.js Finished Loaded");
