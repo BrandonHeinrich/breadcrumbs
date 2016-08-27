@@ -7,7 +7,7 @@ var State = {
 
 var Events = {
   "OnLoad": function() {
-  	
+  	document.addEventListener("deviceready", Events.DeviceReady, false);
     
     console.log("End of on load event");
   },
