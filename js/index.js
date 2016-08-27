@@ -15,6 +15,8 @@ var Events = {
   	
   	// We want to update location at least once a second
     setInterval(Commands.PullLocation, 1000);
+    
+    console.log("End of on load event");
   },
   "Pause": function() {
   	console.log("paused");
@@ -24,9 +26,11 @@ var Events = {
   },
   "BackButton": function() {
   	alert("BackButton Pressed");
+  	console.log("Back");
   },
   "MenuButton": function() {
   	alert("MenuButton Pressed");
+  	console.log("Menu");
   }
 };
 
@@ -49,3 +53,5 @@ var Commands = {
         
   }
 };
+
+alert("Index.js Finished Loading");
